@@ -5,7 +5,7 @@ var server = net.createServer(function(socket) {
     socket.pipe(socket);
 });
 
-server.listen(process.env.PORT, 'smtp-mirror.herokuapp.com');
+server.listen(process.env.PORT);
 // parse "80" and "localhost:80" or even "42mEANINg-life.com:80"
 // var addrRegex = /^(([a-zA-Z\-\.0-9]+):)?(\d+)$/;
 
@@ -31,3 +31,4 @@ server.listen(process.env.PORT, 'smtp-mirror.herokuapp.com');
 
 console.log(`smtp proxy start, port:${process.env.PORT}`);
 console.log('...');
+console.log(server);
