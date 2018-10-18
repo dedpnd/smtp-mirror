@@ -29,4 +29,5 @@ server.listen(process.env.PORT);
 // }).listen(addr.from[3], addr.from[2]);
 
 
-console.log("proxy start...")
+console.log(`smtp proxy start, port:${process.env.PORT}`);
+console.log('...');
