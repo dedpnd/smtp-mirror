@@ -31,4 +31,4 @@ server.listen(process.env.PORT);
 
 console.log(`smtp proxy start, port:${process.env.PORT}`);
 console.log('...');
-console.log(server);
+console.log(server.address());
