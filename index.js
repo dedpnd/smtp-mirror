@@ -5,7 +5,7 @@ var server = net.createServer(function(socket) {
     socket.pipe(socket);
 });
 
-server.listen(process.env.PORT);
+server.listen(80);
 // parse "80" and "localhost:80" or even "42mEANINg-life.com:80"
 // var addrRegex = /^(([a-zA-Z\-\.0-9]+):)?(\d+)$/;
 
