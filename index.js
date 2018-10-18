@@ -1,5 +1,11 @@
 var net = require('net');
 
+var server = net.createServer(function(socket) {
+    socket.write('Echo server\r\n');
+    socket.pipe(socket);
+});
+
+server.listen(process.env.PORT);
 // parse "80" and "localhost:80" or even "42mEANINg-life.com:80"
 // var addrRegex = /^(([a-zA-Z\-\.0-9]+):)?(\d+)$/;
 
@@ -22,5 +28,5 @@ var net = require('net');
 //     to.pipe(from);
 // }).listen(addr.from[3], addr.from[2]);
 
-console.log(process.env.PORT)
+
 console.log("proxy start...")
